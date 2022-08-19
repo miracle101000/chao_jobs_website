@@ -194,11 +194,11 @@ class MediumScreen extends StatelessWidget {
                               )
                             : Text(Functions.lang[index].tr,
                                 style: GoogleFonts.kanit(
-                                  color: Functions
-                                              .hook[Get.locale!.languageCode] ==
-                                          Functions.lang[index].tr
-                                      ? const Color.fromARGB(255, 5, 10, 48)
-                                      : Colors.grey,
+                                  color:
+                                      Functions.rhook[Functions.lang[index]] ==
+                                              Get.locale!.languageCode
+                                          ? const Color.fromARGB(255, 5, 10, 48)
+                                          : Colors.grey,
                                 )),
                       ),
                       onTap: () async {
