@@ -28,10 +28,13 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   google_fonts: ^3.0.1
-  liquid_swipe: ^3.0.0
+  url_launcher: ^6.1.5
+  get: ^4.6.5
 
   flutter:
     sdk: flutter
+  flutter_localizations: # Add this line
+    sdk: flutter  
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -62,7 +65,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/iphone.png
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
