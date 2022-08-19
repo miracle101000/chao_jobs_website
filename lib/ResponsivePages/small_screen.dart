@@ -116,7 +116,7 @@ class SmallScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         Functions.platformDownloadButton(
-                            'assets/images/getiphone.png', type),
+                            'assets/images/getphone.png', type),
                         const SizedBox(
                           width: 16,
                         ),
