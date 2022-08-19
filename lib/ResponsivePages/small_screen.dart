@@ -161,10 +161,7 @@ class SmallScreen extends StatelessWidget {
                   SizedBox(
                     height: 8,
                   ),
-                  const Icon(
-                    IconData(0xe4f0, fontFamily: 'MaterialIcons'),
-                    color: Colors.blue,
-                  ),
+
                   SizedBox(
                     height: 170,
                     child: ListView.builder(
@@ -210,14 +207,9 @@ class SmallScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       Text(
-                        '101 Inc.',
+                        '101 Inc.\u00A9',
                         style: TextStyle(color: Colors.grey),
                       ),
-                      Icon(
-                        IconData(0xef87, fontFamily: 'MaterialIcons'),
-                        color: Colors.blue,
-                        size: 10,
-                      )
                     ],
                   )
                 ],
