@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../functions.dart';
 
 class SmallScreen extends StatelessWidget {
@@ -167,10 +166,11 @@ class SmallScreen extends StatelessWidget {
                     color: Colors.blue,
                   ),
                   SizedBox(
-                    height: 150,
+                    height: 170,
                     child: ListView.builder(
                         itemCount: Functions.lang.length,
                         padding: EdgeInsets.zero,
+                        physics: const NeverScrollableScrollPhysics(),
                         scrollDirection: Axis.vertical,
                         itemBuilder: (context, index) {
                           return GestureDetector(

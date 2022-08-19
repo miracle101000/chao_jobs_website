@@ -1,6 +1,9 @@
-import 'package:chao_jobs_website/ResponsivePages/large_screen.dart';
-import 'package:chao_jobs_website/ResponsivePages/medium_screen.dart';
-import 'package:chao_jobs_website/ResponsivePages/small_screen.dart';
+import 'package:chao_jobs_website/ResponsivePages/large_screen.dart'
+    deferred as a;
+import 'package:chao_jobs_website/ResponsivePages/medium_screen.dart'
+    deferred as b;
+import 'package:chao_jobs_website/ResponsivePages/small_screen.dart'
+    deferred as c;
 import 'package:flutter/material.dart';
 
 import 'functions.dart';
@@ -16,12 +19,12 @@ class LandingPage extends StatelessWidget {
       builder: (context, constraints) {
         print("screen width: ${constraints.maxWidth}");
         if (constraints.maxWidth > 1200) {
-          return const LargeScreen(type: Screen.LARGE);
+          return a.LargeScreen(type: Screen.LARGE);
         } else if (constraints.maxWidth <= 1200 &&
             constraints.maxWidth >= 800) {
-          return const MediumScreen(type: Screen.MEDIUM);
+          return b.MediumScreen(type: Screen.MEDIUM);
         } else {
-          return const SmallScreen(type: Screen.SMALL);
+          return c.SmallScreen(type: Screen.SMALL);
         }
       },
     );
