@@ -28,7 +28,7 @@ class LandingPage extends StatelessWidget {
                 }
                 return a.LargeScreen(type: Screen.LARGE);
               }
-              return CircularProgressIndicator();
+              return progres();
             },
           );
         } else if (constraints.maxWidth <= 1200 &&
@@ -42,7 +42,7 @@ class LandingPage extends StatelessWidget {
                 }
                 return b.MediumScreen(type: Screen.MEDIUM);
               }
-              return const CircularProgressIndicator();
+              return progres();
             },
           );
         } else {
@@ -55,11 +55,15 @@ class LandingPage extends StatelessWidget {
                 }
                 return c.SmallScreen(type: Screen.SMALL);
               }
-              return const CircularProgressIndicator();
+              return progres();
             },
           );
         }
       },
     );
+  }
+
+  progres() {
+    return Container();
   }
 }
