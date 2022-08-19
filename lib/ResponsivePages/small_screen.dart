@@ -162,7 +162,7 @@ class SmallScreen extends StatelessWidget {
                     height: 8,
                   ),
                   const Icon(
-                    Icons.public,
+                    IconData(0xe4f0, fontFamily: 'MaterialIcons'),
                     color: Colors.blue,
                   ),
                   SizedBox(
@@ -214,7 +214,7 @@ class SmallScreen extends StatelessWidget {
                         style: TextStyle(color: Colors.grey),
                       ),
                       Icon(
-                        Icons.copyright_outlined,
+                        IconData(0xef87, fontFamily: 'MaterialIcons'),
                         color: Colors.blue,
                         size: 10,
                       )

@@ -176,7 +176,8 @@ class MediumScreen extends StatelessWidget {
                                         color: Colors.grey,
                                       )),
                                   const Icon(
-                                    Icons.copyright_outlined,
+                                    IconData(0xef87,
+                                        fontFamily: 'MaterialIcons'),
                                     color: Colors.blue,
                                     size: 10,
                                   ),
@@ -184,7 +185,8 @@ class MediumScreen extends StatelessWidget {
                                     width: 16,
                                   ),
                                   const Icon(
-                                    Icons.public,
+                                    IconData(0xe4f0,
+                                        fontFamily: 'MaterialIcons'),
                                     color: Colors.blue,
                                   ),
                                   const SizedBox(
