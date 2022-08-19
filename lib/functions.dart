@@ -12,14 +12,14 @@ class Functions {
   static List<String> lang = ['arabic', "english", "french", 'portuguese'];
 
   static Map<String, String> hook = {
-    'ar': "arabic",
+    "ar": "arabic",
     "en": "english",
     "fr": "french",
     "pt": "portuguese"
   };
 
   static Map<String, String> rhook = {
-    "arabic": 'ar',
+    "arabic": "ar",
     "english": "en",
     "french": "fr",
     "portuguese": "pt",

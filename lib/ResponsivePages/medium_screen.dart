@@ -164,6 +164,7 @@ class MediumScreen extends StatelessWidget {
                   itemCount: Functions.lang.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
+                    print(Functions.lang[index]);
                     return GestureDetector(
                       child: Padding(
                         padding: EdgeInsets.only(
@@ -185,7 +186,7 @@ class MediumScreen extends StatelessWidget {
                                       style: GoogleFonts.kanit(
                                         color: Functions.hook[
                                                     Get.locale!.languageCode] ==
-                                                Functions.lang[index].tr
+                                                Functions.lang[index]
                                             ? const Color.fromARGB(
                                                 255, 5, 10, 48)
                                             : Colors.grey,
@@ -194,11 +195,11 @@ class MediumScreen extends StatelessWidget {
                               )
                             : Text(Functions.lang[index].tr,
                                 style: GoogleFonts.kanit(
-                                  color:
-                                      Functions.rhook[Functions.lang[index]] ==
-                                              Get.locale!.languageCode
-                                          ? const Color.fromARGB(255, 5, 10, 48)
-                                          : Colors.grey,
+                                  color: Functions
+                                              .hook[Get.locale!.languageCode] ==
+                                          Functions.lang[index]
+                                      ? const Color.fromARGB(255, 5, 10, 48)
+                                      : Colors.grey,
                                 )),
                       ),
                       onTap: () async {

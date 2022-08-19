@@ -196,7 +196,7 @@ class LargeScreen extends StatelessWidget {
                                           style: GoogleFonts.kanit(
                                             color: Functions.hook[Get.locale!
                                                         .languageCode] ==
-                                                    Functions.lang[index].tr
+                                                    Functions.lang[index]
                                                 ? const Color.fromARGB(
                                                     255, 5, 10, 48)
                                                 : Colors.grey,
