@@ -185,26 +185,12 @@ class LargeScreen extends StatelessWidget {
                             child: index == 0
                                 ? Row(
                                     children: [
-                                      Text('101 Inc.',
+                                      Text('101 Inc.\u00A9',
                                           style: GoogleFonts.kanit(
                                             color: Colors.grey,
                                           )),
-                                      const Icon(
-                                        IconData(0xef87,
-                                            fontFamily: 'MaterialIcons'),
-                                        color: Colors.blue,
-                                        size: 10,
-                                      ),
                                       const SizedBox(
                                         width: 16,
-                                      ),
-                                      const Icon(
-                                        IconData(0xe4f0,
-                                            fontFamily: 'MaterialIcons'),
-                                        color: Colors.blue,
-                                      ),
-                                      const SizedBox(
-                                        width: 4,
                                       ),
                                       Text(Functions.lang[index].tr,
                                           style: GoogleFonts.kanit(
