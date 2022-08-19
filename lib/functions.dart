@@ -10,7 +10,7 @@ enum Screen { LARGE, MEDIUM, SMALL }
 
 class Functions {
   static List<String> lang = ['arabic', "english", "french", 'portuguese'];
-
+  var d = '';
   static Map<String, String> hook = {
     "ar": "arabic",
     "en": "english",
