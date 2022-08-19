@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -147,9 +148,9 @@ class Functions {
             )),
         onTap: () async {
           try {
-            if (Platform.isAndroid) {
+            if (GetPlatform.isAndroid) {
               await _launchUrl(url['assets/images/getandroid.png']!);
-            } else if (Platform.isIOS) {
+            } else if (GetPlatform.isIOS) {
               await _launchUrl(url['assets/images/getiphone.png']!);
             }
           } catch (_) {
@@ -166,6 +167,7 @@ class Functions {
           child: Container(
               // width: MediaQuery.of(context).size.width * 0.3,
               child: Text('\u2022 $text',
+                  textAlign: TextAlign.center,
                   style:
                       GoogleFonts.kanit(color: Colors.white, fontSize: 30))));
     } else if (type == Screen.MEDIUM) {
@@ -174,6 +176,7 @@ class Functions {
           child: Container(
               // width: MediaQuery.of(context).size.width * 0.3,
               child: Text('\u2022 $text',
+                  textAlign: TextAlign.center,
                   style:
                       GoogleFonts.kanit(color: Colors.white, fontSize: 25))));
     } else {
@@ -182,6 +185,7 @@ class Functions {
           child: Container(
               // width: MediaQuery.of(context).size.width * 0.3,
               child: Text(text,
+                  textAlign: TextAlign.center,
                   style:
                       GoogleFonts.kanit(color: Colors.white, fontSize: 11))));
     }

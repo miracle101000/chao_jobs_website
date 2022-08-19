@@ -19,12 +19,45 @@ class LandingPage extends StatelessWidget {
       builder: (context, constraints) {
         print("screen width: ${constraints.maxWidth}");
         if (constraints.maxWidth > 1200) {
-          return a.LargeScreen(type: Screen.LARGE);
+          return FutureBuilder<void>(
+            future: a.loadLibrary(),
+            builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
+                }
+                return a.LargeScreen(type: Screen.LARGE);
+              }
+              return CircularProgressIndicator();
+            },
+          );
         } else if (constraints.maxWidth <= 1200 &&
             constraints.maxWidth >= 800) {
-          return b.MediumScreen(type: Screen.MEDIUM);
+          return FutureBuilder<void>(
+            future: b.loadLibrary(),
+            builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
+                }
+                return b.MediumScreen(type: Screen.MEDIUM);
+              }
+              return const CircularProgressIndicator();
+            },
+          );
         } else {
-          return c.SmallScreen(type: Screen.SMALL);
+          return FutureBuilder<void>(
+            future: c.loadLibrary(),
+            builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
+                }
+                return c.SmallScreen(type: Screen.SMALL);
+              }
+              return const CircularProgressIndicator();
+            },
+          );
         }
       },
     );
